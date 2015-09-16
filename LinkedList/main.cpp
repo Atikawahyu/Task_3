@@ -123,12 +123,6 @@ int main()
     system("cls");
     printInfo(l);
     break;
-    case 0:
-    cout<<"Selesai"<<endl;
-    break;
-    default:
-    cout<<"Pilihan Tidak Tersedia"<<endl;
-    getch();
     }
     }
     while (pil != 0);
