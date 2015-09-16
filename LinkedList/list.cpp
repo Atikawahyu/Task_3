@@ -16,6 +16,39 @@ void dealokasi (address p)
     free(p);
 };
 
+address alokasi (infotype x)
+{
+    address p;
+    p = (address) malloc (sizeof(elmlist));
+    p -> info = x;
+    p -> next = NULL;
+    return p;
+};
+
+void InsertFirst (list *l, address p)
+{
+    if (((*l).first) == NULL)
+    {
+        (*l).first = p;
+    }
+    else
+    {
+        p -> next = (*l).first;
+        (*l).first = p;
+    }
+    getch();
+};
+
+void InsertLast (list *l, address p)
+{
+    address q = (*l).first;
+    while (q -> next != NULL)
+    {
+        q = q -> next;
+    }
+    q -> next = p;
+};
+
 void InsertAfter (list *l,address q, address p)
 {
     cout<<"Input Setelah Data ke : ";
