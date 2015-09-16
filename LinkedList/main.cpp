@@ -36,6 +36,31 @@ int main()
     case 5:
     deleteLast (&l,p);
     break;
+    case 7:
+    cout<<"Masukkan ID yang dicari : ";
+    cin>>x.ID_customer;
+
+    s = searchCustomer(l,x);
+    if (s!=NULL)
+    {
+        cout<< "ID Ditemukan"<<endl;
+        cout << "ID Customer : " << (s -> info).ID_customer << endl;
+        cout << "Nama : " << (s -> info).nama << endl;
+        cout << "No. HP : " << (s -> info).no_hp << endl;
+        cout << "Alamat : " << (s -> info).alamat << endl;
+        cout << "E-Mail : " << (s -> info).email << endl;
+        getch();
+    }
+    else
+    {
+        cout<<"ID tidak ada"<<endl;
+        getch();
+    }
+    break;
+    case 9:
+    system("cls");
+    printInfo(l);
+    break;
     }
     }
     while (pil != 0);
