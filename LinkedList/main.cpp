@@ -93,11 +93,42 @@ int main()
     case 6:
     deleteAfter (&l,q,p);
     break;
+    case 7:
+    cout<<"Masukkan ID yang dicari : ";
+    cin>>x.ID_customer;
+
+    s = searchCustomer(l,x);
+    if (s!=NULL)
+    {
+        cout<< "ID Ditemukan"<<endl;
+        cout << "ID Customer : " << (s -> info).ID_customer << endl;
+        cout << "Nama : " << (s -> info).nama << endl;
+        cout << "No. HP : " << (s -> info).no_hp << endl;
+        cout << "Alamat : " << (s -> info).alamat << endl;
+        cout << "E-Mail : " << (s -> info).email << endl;
+        getch();
+    }
+    else
+    {
+        cout<<"ID tidak ada"<<endl;
+        getch();
+    }
+    break;
     case 8:
     insertionsort(l);
     cout<<"Data telah diurutkan !!"<<endl;
     getch();
     break;
+    case 9:
+    system("cls");
+    printInfo(l);
+    break;
+    case 0:
+    cout<<"Selesai"<<endl;
+    break;
+    default:
+    cout<<"Pilihan Tidak Tersedia"<<endl;
+    getch();
     }
     }
     while (pil != 0);
