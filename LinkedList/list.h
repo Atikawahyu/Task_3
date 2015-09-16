@@ -20,6 +20,12 @@ struct list
     address first;
 };
 
+void createList (list *l);
+void dealokasi (address p);
+address alokasi (infotype x);
+
+void InsertFirst (list *l, address p);
+void InsertLast (list *l, address p);
 void InsertAfter (list *l,address q, address p);
 
 void deleteFirst (list *l, address p);
