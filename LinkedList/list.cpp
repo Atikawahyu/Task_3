@@ -6,6 +6,11 @@
 using namespace std;
 infotype x;
 
+void createList (list *l)
+{
+    (*l).first = NULL;
+};
+
 address searchCustomer(list l, infotype x)
 {
     address s;
